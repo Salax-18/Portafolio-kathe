@@ -1,0 +1,119 @@
+
+@font-face {
+  font-family: 'GeometrySoftPro';
+  src: url('fonts/GeometrySoftPro-BoldN.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background: #fafafa;
+  color: #333;
+  scroll-behavior: smooth;
+}
+
+/* NAVBAR FIJA */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(107, 91, 149, 0.95);
+  padding: 15px 30px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  z-index: 1000;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+
+.navbar a:hover {
+  color: #042440;
+}
+
+/* Header - sección inicio */
+header#inicio {
+  height: 100vh;
+  background: linear-gradient(135deg, #6b5b95, #b8a9c9);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  padding-top: 80px; /* para que el header no quede tapado */
+}
+
+header#inicio h1 {
+  font-family: 'GeometrySoftPro', sans-serif;
+  font-size: 10rem;
+  margin-bottom: 0.2em;
+}
+
+header#inicio p {
+  font-size: 1.5rem;
+  font-weight: 300;
+  margin-bottom: 1em;
+}
+
+
+/* Secciones */
+section {
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 0 20px;
+}
+
+/* Galería de proyectos */
+.galeria {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.proyecto {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+  width: 280px;
+  padding: 15px;
+  text-align: center;
+}
+
+.proyecto img {
+  width: 100%;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+/* Lista de habilidades */
+#habilidades ul {
+  list-style-type: square;
+  padding-left: 20px;
+  font-size: 1.2rem;
+}
+
+footer {
+  text-align: center;
+  padding: 15px 10px;
+  background: #6b5b95;
+  color: white;
+  margin-top: 40px;
+}
