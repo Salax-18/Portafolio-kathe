@@ -6,6 +6,14 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'Biko_Regular';
+  src: url('fonts/Biko_Regular.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+
 /* Reset básico */
 * {
   margin: 0;
@@ -14,7 +22,7 @@
 }
 
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Biko_Regular', Arial, sans-serif;
   line-height: 1.6;
   background: #fafafa;
   color: #333;
@@ -35,6 +43,7 @@ body {
 }
 
 .navbar a {
+  font-family: 'Biko_Regular', Arial, sans-serif;
   color: white;
   text-decoration: none;
   font-weight: 500;
@@ -62,11 +71,16 @@ header#inicio {
 
 header#inicio h1 {
   font-family: 'GeometrySoftPro', sans-serif;
-  font-size: 10rem;
+  font-size: 7rem;
   margin-bottom: 0.2em;
+  max-width: 700px;  
+  margin: 0 auto;    
+  padding: 0 20px; 
+  line-height: normal;
 }
 
 header#inicio p {
+   font-family: 'Biko_Regular', sans-serif;
   font-size: 1.5rem;
   font-weight: 300;
   margin-bottom: 1em;
@@ -74,6 +88,14 @@ header#inicio p {
 
 
 /* Secciones */
+
+section#sobre-mi h2{
+  font-family: 'GeometrySoftPro', sans-serif;
+  font-size: 2rem;
+  margin-bottom: 20px;
+ 
+}
+
 section {
   max-width: 900px;
   margin: 50px auto;
@@ -81,6 +103,7 @@ section {
 }
 
 /* Galería de proyectos */
+
 .galeria {
   display: flex;
   gap: 20px;
@@ -88,7 +111,14 @@ section {
   justify-content: center;
 }
 
+section#proyectos h2 {
+  font-family: 'GeometrySoftPro', sans-serif;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
 .proyecto {
+  
   background: white;
   border-radius: 8px;
   box-shadow: 0 0 8px rgba(0,0,0,0.1);
@@ -104,10 +134,23 @@ section {
 }
 
 /* Lista de habilidades */
+
+section#habilidades h2 {
+  font-family: 'GeometrySoftPro', sans-serif;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
 #habilidades ul {
+  
   list-style-type: square;
   padding-left: 20px;
   font-size: 1.2rem;
+}
+
+section#contacto h2 {
+  font-family: 'GeometrySoftPro', sans-serif;
+  font-size: 2rem;
+  margin-bottom: 20px;
 }
 
 footer {
