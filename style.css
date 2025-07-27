@@ -1,4 +1,12 @@
 
+:root {
+  --main-purple: #6B5B95;
+  --accent-coral: #F67280;
+  --light-blue: #C0E0DE;
+  --soft-white: #F7F7F7;
+  --light-gray: #DDD;
+}
+
 @font-face {
   font-family: 'GeometrySoftPro';
   src: url('fonts/GeometrySoftPro-BoldN.otf') format('opentype');
@@ -24,17 +32,29 @@
 body {
   font-family: 'Biko_Regular', Arial, sans-serif;
   line-height: 1.6;
-  background: #fafafa;
+  background: linear-gradient(270deg, #6B5B95, #ec939c, #9986a2);
+  background-size: 600% 600%;
+  animation: animarFondo 15s ease infinite;
   color: #333;
   scroll-behavior: smooth;
 }
+html, body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  flex: 1;
+}
+
 
 /* NAVBAR FIJA */
 .navbar {
   position: fixed;
   top: 0;
   width: 100%;
-  background: rgba(107, 91, 149, 0.95);
+  background:#C0E0DE(107, 91, 149, 0.95);
   padding: 15px 30px;
   display: flex;
   justify-content: center;
@@ -47,7 +67,7 @@ body {
   color: white;
   text-decoration: none;
   font-weight: 500;
-  font-size: 1rem;
+  font-size: 1.2rem;
   transition: color 0.3s;
 }
 
@@ -56,9 +76,8 @@ body {
 }
 
 /* Header - sección inicio */
-header#inicio {
+header#welcome {
   height: 100vh;
-  background: linear-gradient(135deg, #6b5b95, #b8a9c9);
   color: white;
   display: flex;
   flex-direction: column;
@@ -69,7 +88,7 @@ header#inicio {
   padding-top: 80px; /* para que el header no quede tapado */
 }
 
-header#inicio h1 {
+header#welcome h1 {
   font-family: 'GeometrySoftPro', sans-serif;
   font-size: 7rem;
   margin-bottom: 0.2em;
@@ -79,11 +98,12 @@ header#inicio h1 {
   line-height: normal;
 }
 
-header#inicio p {
+header#welcome p {
    font-family: 'Biko_Regular', sans-serif;
   font-size: 1.5rem;
   font-weight: 300;
   margin-bottom: 1em;
+  margin-top: 2%;
 }
 
 
@@ -153,10 +173,30 @@ section#contacto h2 {
   margin-bottom: 20px;
 }
 
+/*control de visibilidad de secciones */
+.seccion {
+  display: none;
+}
+
+.seccion.activa {
+  display: block;
+}
+#welcome {
+  display: block;
+}
+
+#welcome.oculto {
+  display: none;
+}
+
 footer {
+  box-shadow: 0 -3px 6px rgba(0, 0, 0, 0.2);
   text-align: center;
-  padding: 15px 10px;
-  background: #6b5b95;
-  color: white;
-  margin-top: 40px;
+}
+
+
+@keyframes animarFondo {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
